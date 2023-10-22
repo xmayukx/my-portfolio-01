@@ -4,8 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { BsArrowRight } from "react-icons/bs";
-import { HiDownload } from "react-icons/hi";
-import { BiLogoGithub, BiLogoLinkedin } from "react-icons/bi";
+import { BiLogoLinkedin } from "react-icons/bi";
 import { FiGithub } from "react-icons/fi";
 import { GrDocumentText } from "react-icons/gr";
 
@@ -13,7 +12,7 @@ export default function Intro() {
   return (
     <section className="mb-28 max-w-[50rem] text-center sm:mb-0">
       <div className="flex items-center justify-center">
-        <div className="relative">
+        <div className="relative group">
           <motion.div
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -26,12 +25,12 @@ export default function Intro() {
               height={192}
               quality={95}
               priority={true}
-              className="h-24 w-24 rounded-full object-cover border-[0.35rem] border-black shadow-xl"
+              className="h-24 w-24 rounded-full object-cover border-[0.35rem] border-black shadow-xl group-hover:border-0 transition-all group-hover:w-32 group-hover:h-32"
             />
           </motion.div>
 
           <motion.span
-            className="absolute bottom-0 right-0 text-4xl"
+            className="absolute bottom-0 right-0 text-4xl group-hover:text-3xl transition-all delay-0"
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{
@@ -46,54 +45,56 @@ export default function Intro() {
         </div>
       </div>
 
-      <motion.p
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 0 }}
-        className=" font-light mb-10 mt-4 text-2xl px-4 !leading-[1.5] sm:text-4xl md:text-3xl"
-      >
-        I&apos;m <span className="font-bold">Mayukh Hazari</span>, a{" "}
-        <span className=" font-medium">Full-stack Web developer</span>{" "}
-        passionate about crafting digital experiences that combine innovation
-        and functionality.
-      </motion.p>
-      <motion.div
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.1 }}
-        className="flex flex-col sm:flex-row gap-x-2 justify-center grid-cols-2 text-lg"
-      >
-        <Link
-          href="#contact"
-          className=" group bg-rose-950/30 text-white px-7 py-2 flex items-center gap-2 rounded-3xl outline-none hover:scale-110 hover:bg-rose-950 transition active:scale-95"
+      <div className="">
+        <motion.h1
+          initial={{ opacity: 0, y: 100 }}
+          animate={{ opacity: 1, y: 0 }}
+          className=" font-light mb-10 mt-4 text-2xl px-4 !leading-[1.5] sm:text-4xl md:text-3xl"
         >
-          <span className="">Contact me here</span>{" "}
-          <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition-all" />{" "}
-        </Link>
-        <Link
-          target="_blank"
-          className=" bg-white text-rose-950 px-7 py-2 flex items-center gap-2 rounded-3xl utline-none hover:scale-110 transition active:scale-95"
-          href={
-            "https://drive.google.com/file/d/1AlPp-0wU2c0YWzthFUWb8Wj-wEhTMcTM/view"
-          }
+          I&apos;m <span className="font-bold">Mayukh Hazari</span>, a{" "}
+          <span className=" font-medium">Full-stack Web developer</span>{" "}
+          passionate about crafting digital experiences that combine innovation
+          and functionality.
+        </motion.h1>
+        <motion.div
+          initial={{ opacity: 0, y: 100 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.1 }}
+          className="flex flex-col sm:flex-row gap-x-2 justify-center grid-cols-2 text-lg"
         >
-          My Resume <GrDocumentText className="" />
-        </Link>
-        <Link
-          target="_blank"
-          className="bg-white text-rose-950 p-4 flex items-center gap-2 rounded-full"
-          href={"https://www.linkedin.com/in/mayukh-hazari-212276220"}
-        >
-          <BiLogoLinkedin className="text-xl" />
-        </Link>
-        <Link
-          target="_blank"
-          className="bg-white text-rose-950 p-4 flex items-center gap-2 rounded-full"
-          href={"https://www.linkedin.com/in/mayukh-hazari-212276220"}
-        >
-          {/* <BsLinkedin />{" "} */}
-          <FiGithub className="text-xl font-medium" />
-        </Link>
-      </motion.div>
+          <Link
+            href="#contact"
+            className=" group bg-rose-950/30 text-white px-7 py-2 flex items-center gap-2 rounded-3xl outline-none hover:scale-110 hover:bg-rose-950 transition active:scale-95 cursor-pointer"
+          >
+            <span className="">Contact me here</span>{" "}
+            <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition-all" />{" "}
+          </Link>
+          <Link
+            target="_blank"
+            className=" bg-white text-rose-950 px-7 py-2 flex items-center gap-2 rounded-3xl outline-none hover:scale-110 transition active:scale-95"
+            href={
+              "https://drive.google.com/file/d/1AlPp-0wU2c0YWzthFUWb8Wj-wEhTMcTM/view"
+            }
+          >
+            My Resume <GrDocumentText className="" />
+          </Link>
+          <Link
+            target="_blank"
+            className="bg-white text-rose-950 p-4 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] transition active:scale-105 cursor-pointer border"
+            href={"https://www.linkedin.com/in/mayukh-hazari-212276220"}
+          >
+            <BiLogoLinkedin className="text-xl" />
+          </Link>
+          <Link
+            target="_blank"
+            className="bg-white text-rose-950 p-4 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] transition active:scale-105 cursor-pointer border"
+            href={"https://www.linkedin.com/in/mayukh-hazari-212276220"}
+          >
+            {/* <BsLinkedin />{" "} */}
+            <FiGithub className="text-xl font-medium" />
+          </Link>
+        </motion.div>
+      </div>
     </section>
   );
 }
