@@ -2,15 +2,23 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect } from "react";
 import { BsArrowRight } from "react-icons/bs";
 import { BiLogoLinkedin } from "react-icons/bi";
 import { FiGithub } from "react-icons/fi";
 import { GrDocumentText } from "react-icons/gr";
+import { useInView } from "react-intersection-observer";
+import { useActiveSectionContext } from "@/context/active-section-context";
+import { useSectionInView } from "@/lib/hooks";
 
 export default function Intro() {
+  const { ref } = useSectionInView("Home");
   return (
-    <section className="mb-28 max-w-[50rem] text-center sm:mb-0">
+    <section
+      ref={ref}
+      id="home"
+      className="scroll-mt-[100rem] mb-28 max-w-[50rem] text-center sm:mb-0"
+    >
       <div className="flex items-center justify-center">
         <div className="relative group">
           <motion.div
