@@ -6,13 +6,15 @@ import React, { useEffect } from "react";
 import { BsArrowRight } from "react-icons/bs";
 import { BiLogoLinkedin } from "react-icons/bi";
 import { FiGithub } from "react-icons/fi";
-import { GrDocumentText } from "react-icons/gr";
+import { HiOutlineDocumentText } from "react-icons/hi2";
 import { useInView } from "react-intersection-observer";
 import { useActiveSectionContext } from "@/context/active-section-context";
 import { useSectionInView } from "@/lib/hooks";
 
 export default function Intro() {
   const { ref } = useSectionInView("Home");
+  const { activeSection, setActiveSection, setTimeOfLastClick } =
+    useActiveSectionContext();
   return (
     <section
       ref={ref}
@@ -27,7 +29,7 @@ export default function Intro() {
             transition={{ type: "tween", duration: 0.2 }}
           >
             <Image
-              src="https://scontent.fccu2-3.fna.fbcdn.net/v/t39.30808-6/343446542_2261125667408672_5147025850231075617_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=5f2048&_nc_ohc=YDF1wk_BVLAAX89rBOl&_nc_ht=scontent.fccu2-3.fna&oh=00_AfA7F6gHr4MsreIJN_58kITYh-4ah3un0t0GCYuXmw67hQ&oe=6536C601"
+              src="/me.png"
               alt="mayukh-hazari"
               width={192}
               height={192}
@@ -71,31 +73,35 @@ export default function Intro() {
           className="flex flex-col sm:flex-row gap-x-2 justify-center grid-cols-2 text-lg"
         >
           <Link
+            onClick={() => {
+              setActiveSection("Contact");
+              setTimeOfLastClick(Date.now());
+            }}
             href="#contact"
-            className=" group bg-rose-950/30 text-white px-7 py-2 flex items-center gap-2 rounded-3xl outline-none hover:scale-110 hover:bg-rose-950 transition active:scale-95 cursor-pointer"
+            className=" group bg-black/40 text-white px-7 py-2 flex items-center gap-2 rounded-3xl outline-none hover:scale-110 hover:bg-black transition active:scale-95 cursor-pointer"
           >
             <span className="">Contact me here</span>{" "}
             <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition-all" />{" "}
           </Link>
           <Link
             target="_blank"
-            className=" bg-white text-rose-950 px-7 py-2 flex items-center gap-2 rounded-3xl outline-none hover:scale-110 transition active:scale-95"
+            className="  bg-gray-300/10 text-white px-7 py-2 flex items-center gap-2 rounded-3xl outline-none hover:scale-110 transition active:scale-95"
             href={
               "https://drive.google.com/file/d/1AlPp-0wU2c0YWzthFUWb8Wj-wEhTMcTM/view"
             }
           >
-            My Resume <GrDocumentText className="" />
+            My Resume <HiOutlineDocumentText className="" />
           </Link>
           <Link
             target="_blank"
-            className="bg-white text-rose-950 p-4 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] transition active:scale-105 cursor-pointer border"
+            className="bg-gray-300/10 text-white p-4 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] transition active:scale-105 cursor-pointer"
             href={"https://www.linkedin.com/in/mayukh-hazari-212276220"}
           >
             <BiLogoLinkedin className="text-xl" />
           </Link>
           <Link
             target="_blank"
-            className="bg-white text-rose-950 p-4 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] transition active:scale-105 cursor-pointer border"
+            className="bg-gray-300/10 text-white p-4 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] transition active:scale-105 cursor-pointer"
             href={"https://www.linkedin.com/in/mayukh-hazari-212276220"}
           >
             {/* <BsLinkedin />{" "} */}

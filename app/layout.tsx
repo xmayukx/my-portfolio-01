@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { Exo_2 } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header";
-import { ActiveSectionContext } from "@/context/active-section-context";
-import { useContext } from "react";
 import ActiveSectionContextProvider from "@/context/active-section-context";
+import { Toaster } from "react-hot-toast";
+import Footer from "@/components/footer";
 
 const inter = Exo_2({ subsets: ["latin"] });
 
@@ -29,6 +29,8 @@ export default function RootLayout({
         <ActiveSectionContextProvider>
           <Header />
           {children}
+          <Footer />
+          <Toaster position="top-center" />
         </ActiveSectionContextProvider>
       </body>
     </html>
