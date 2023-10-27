@@ -10,10 +10,10 @@ export default function SubmitBtn() {
       <button
         disabled={pending}
         type="submit"
-        className="group h-[3rem] w-[8rem] bg-gray-800 text-white rounded-full outline-none transition-all flex items-center justify-center gap-2 focus:scale-110 hover:scale-110 hover:bg-gray-900 active:scale-105 disabled:scale-100 disabled:bg-opacity-100"
+        className="group font-medium h-[3rem] w-[8rem] dark:bg-gray-800 bg-gray-800/10 dark:text-white rounded-full outline-none transition-all flex items-center justify-center gap-2 focus:scale-110 hover:scale-110 dark:hover:bg-gray-900 active:scale-105 disabled:scale-100 disabled:bg-opacity-100"
       >
         {pending ? (
-          <div className="h-5 w-5 animate-spin rounded-full border-b-2 border-white"></div>
+          <div className="h-5 w-5 animate-spin rounded-full border-b-2 dark:border-white border-black"></div>
         ) : (
           <>
             Submit{" "}

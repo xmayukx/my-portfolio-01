@@ -23,7 +23,7 @@ export default function Contact() {
       className="mb-20 sm:mb-28 w-[min(100%,38rem)] text-center"
     >
       <SectionHeading>Contact me</SectionHeading>
-      <p className="text-gray-500 -mt-4">
+      <p className="dark:text-gray-500 -mt-4">
         Please contact me directly at{" "}
         <a className="underline" href="mailto:hazari.mayukh77@gmail.com">
           {" "}
@@ -60,14 +60,14 @@ export default function Contact() {
           type="email"
           required
           maxLength={500}
-          className="px-4 h-14 rounded-lg bg-inherit text-inherit p-4 border-2 border-gray-800/90"
+          className="px-4 h-14 rounded-lg dark:bg-inherit dark:text-inherit p-4 border-2 dark:border-gray-800/90"
         />
         <textarea
           name="message"
           required
           maxLength={5000}
           placeholder="Your message"
-          className="bg-inherit text-inherit h-52 my-3 rounded-lg border-2 border-gray-800/90 p-4"
+          className="dark:bg-inherit dark:text-inherit h-52 my-3 rounded-lg border-2 dark:border-gray-800/90 p-4"
         />
         <SubmitBtn />
       </form>
