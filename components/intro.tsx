@@ -70,43 +70,46 @@ export default function Intro() {
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
-          className="flex flex-col sm:flex-row gap-x-2 justify-center grid-cols-2 text-lg"
+          className="flex flex-col sm:flex-row gap-x-2 gap-y-2 justify-center grid-cols-2 text-lg"
         >
-          <Link
-            onClick={() => {
-              setActiveSection("Contact");
-              setTimeOfLastClick(Date.now());
-            }}
-            href="#contact"
-            className=" group bg-black/70 text-white px-7 py-2 flex items-center gap-2 rounded-3xl outline-none hover:scale-110 dark:hover:bg-black hover:bg-black transition active:scale-95 cursor-pointer"
-          >
-            <span className="">Contact me here</span>{" "}
-            <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition-all" />{" "}
-          </Link>
-          <Link
-            target="_blank"
-            className=" bg-white/70 text-black  dark:bg-gray-300/10 dark:text-white px-7 py-2 flex items-center gap-2 rounded-3xl outline-none hover:scale-110 transition active:scale-95"
-            href={
-              "https://drive.google.com/file/d/1AlPp-0wU2c0YWzthFUWb8Wj-wEhTMcTM/view"
-            }
-          >
-            My Resume <HiOutlineDocumentText className="" />
-          </Link>
-          <Link
-            target="_blank"
-            className="bg-white/70 text-black  dark:bg-gray-300/10 dark:text-white p-4 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] transition active:scale-105 cursor-pointer"
-            href={"https://www.linkedin.com/in/mayukh-hazari-212276220"}
-          >
-            <BiLogoLinkedin className="text-xl" />
-          </Link>
-          <Link
-            target="_blank"
-            className="bg-white/70 text-black  dark:bg-gray-300/10 dark:text-white p-4 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] transition active:scale-105 cursor-pointer"
-            href={"https://www.linkedin.com/in/mayukh-hazari-212276220"}
-          >
-            {/* <BsLinkedin />{" "} */}
-            <FiGithub className="text-xl font-medium" />
-          </Link>
+          <div className="flex gap-x-2 justify-center">
+            <Link
+              onClick={() => {
+                setActiveSection("Contact");
+                setTimeOfLastClick(Date.now());
+              }}
+              href="#contact"
+              className=" group bg-black/70 text-white px-5 py-2 flex items-center gap-1 rounded-3xl outline-none hover:scale-110 dark:hover:bg-black hover:bg-black transition active:scale-95 cursor-pointer"
+            >
+              <span className="">Contact me</span>{" "}
+              <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition-all" />{" "}
+            </Link>
+            <Link
+              target="_blank"
+              className=" bg-white/70 text-black  dark:bg-gray-300/10 dark:text-white px-7 py-2 flex items-center gap-2 rounded-3xl outline-none hover:scale-110 transition active:scale-95"
+              href={
+                "https://drive.google.com/file/d/1AlPp-0wU2c0YWzthFUWb8Wj-wEhTMcTM/view"
+              }
+            >
+              My Resume <HiOutlineDocumentText className="" />
+            </Link>
+          </div>
+          <div className="flex gap-x-2 justify-center">
+            <Link
+              target="_blank"
+              className="bg-white/70 text-black  dark:bg-gray-300/10 dark:text-white p-4 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] transition active:scale-105 cursor-pointer"
+              href={"https://www.linkedin.com/in/mayukh-hazari-212276220"}
+            >
+              <BiLogoLinkedin className="text-xl" />
+            </Link>
+            <Link
+              target="_blank"
+              className="bg-white/70 text-black  dark:bg-gray-300/10 dark:text-white p-4 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] transition active:scale-105 cursor-pointer"
+              href={"https://www.linkedin.com/in/mayukh-hazari-212276220"}
+            >
+              <FiGithub className="text-xl font-medium" />
+            </Link>
+          </div>
         </motion.div>
       </div>
     </section>
