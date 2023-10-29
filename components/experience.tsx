@@ -10,6 +10,7 @@ import { experiencesData } from "@/lib/data";
 import { useSectionInView } from "@/lib/hooks";
 import { useInView } from "react-intersection-observer";
 import { useTheme } from "@/context/theme-context";
+import { IconType } from "react-icons";
 
 export default function Experience() {
   const { ref, inView } = useSectionInView("Experience", 0.25);

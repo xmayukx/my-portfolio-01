@@ -105,7 +105,7 @@ export default function Intro() {
             <Link
               target="_blank"
               className="bg-white/70 text-black  dark:bg-gray-300/10 dark:text-white p-4 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] transition active:scale-105 cursor-pointer"
-              href={"https://www.linkedin.com/in/mayukh-hazari-212276220"}
+              href={"https://github.com/xmayukx"}
             >
               <FiGithub className="text-xl font-medium" />
             </Link>

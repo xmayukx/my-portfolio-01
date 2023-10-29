@@ -3,6 +3,9 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import React, { useRef } from "react";
 import { projectsData } from "@/lib/data";
 import Image from "next/image";
+import Link from "next/link";
+import { BsGithub } from "react-icons/bs";
+import { HiOutlineArrowTopRightOnSquare } from "react-icons/hi2";
 
 type ProjectProps = (typeof projectsData)[number];
 export const Project = ({
@@ -10,6 +13,8 @@ export const Project = ({
   description,
   tags,
   imageUrl,
+  link,
+  deployUrl,
 }: ProjectProps) => {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -26,16 +31,27 @@ export const Project = ({
     >
       <section className=" relative dark:bg-rose-950/60 bg-gray-200 dark:hover:bg-rose-950/50 hover:bg-gray-300 transition max-w-[40rem] border border-black/5 overflow-hidden sm:pr-8 sm:h-[18rem] rounded-lg">
         <div className="sm:group-even:ml-[20rem] pb-7 px-5 sm:pl-10 sm:pr-2 pt-5 sm:max-w-[50%] flex flex-col h-full">
-          <h3 className="text-2xl font-semibold dark:text-rose-100/80">
-            {title}
-          </h3>
-          <p className="mt-2 leading-relaxed dark:text-rose-50">
+          <div className="flex items-center justify-between">
+            <h3 className="text-2xl font-semibold dark:text-rose-100/80">
+              {title}
+            </h3>
+            <div className="flex gap-x-6">
+              <Link className="" href={link} target="_blank">
+                <BsGithub className="text-xl" />
+              </Link>
+              <Link href={deployUrl} className="" target="_blank">
+                <HiOutlineArrowTopRightOnSquare className="text-xl" />
+              </Link>
+            </div>
+          </div>
+
+          <p className="mt-2 leading-relaxed dark:text-rose-50 text-[0.9em]">
             {description}
           </p>
-          <ul className="flex flex-wrap mt-7 gap-2">
+          <ul className="flex flex-wrap mt-7 gap-1">
             {tags.map((tag, index) => (
               <li
-                className="bg-black/[0.7] px-3 py-1 text-[0.7rem] uppercase text-white rounded-lg"
+                className="bg-black/[0.7] px-3 py-1 text-[0.7em] uppercase text-white rounded-lg"
                 key={index}
               >
                 {tag}

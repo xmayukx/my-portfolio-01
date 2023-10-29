@@ -1,8 +1,8 @@
 import React from "react";
-import { CgWorkAlt } from "react-icons/cg";
-import { FaReact } from "react-icons/fa";
-import { LuGraduationCap } from "react-icons/lu";
+import { MdOutlineWorkOutline } from "react-icons/md";
 import alpaca from "@/public/alpaca.png";
+import dimex from "@/public/dimex.png";
+import nft from "@/public/nft-marketplace.png";
 
 export const links = [
   {
@@ -33,28 +33,36 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Graduated bootcamp",
-    location: "Miami, FL",
+    title: "Superteam",
+    location: "Contributer",
     description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
-    icon: React.createElement(LuGraduationCap),
-    date: "2019",
+      "In my role as a Contributor, I actively engage in various initiatives that drive the adoption and development of Web3 solutions. I explore new opportunities, networking with industry leaders, and continuously expanding my knowledge in this rapidly evolving space.",
+    icon: React.createElement(MdOutlineWorkOutline),
+    date: "Oct 2023 - Present",
   },
   {
-    title: "Front-End Developer",
-    location: "Orlando, FL",
+    title: "Google Developer Student Club",
+    location: "Web/App Lead",
     description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
-    icon: React.createElement(CgWorkAlt),
-    date: "2019 - 2021",
+      "As Web/App Lead, I lead the development of the club's website and other web apps.",
+    icon: React.createElement(MdOutlineWorkOutline),
+    date: "Aug 2023 - Present",
   },
   {
-    title: "Full-Stack Developer",
-    location: "Houston, TX",
+    title: "CNCF Hoogly",
+    location: "Technical Team Member",
     description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
-    icon: React.createElement(FaReact),
-    date: "2021 - present",
+      "As a Technical Team Member, I actively engage in various initiatives that drive the adoption and development of Cloud Native community. I explore new opportunities, networking with industry leaders, and continuously expanding my knowledge in this rapidly evolving space.",
+    icon: React.createElement(MdOutlineWorkOutline),
+    date: "Aug 2023 - Present",
+  },
+  {
+    title: "GirlScript Summer of Code",
+    location: "Contributer",
+    description:
+      "As a Contributer, I actively engage and contributed to various Open Source projects. I explore new opportunities, networking with industry leaders, and continuously expanding my knowledge in this rapidly evolving space",
+    icon: React.createElement(MdOutlineWorkOutline),
+    date: "May 2023 - Aug 2023",
   },
 ] as const;
 
@@ -62,23 +70,54 @@ export const projectsData = [
   {
     title: "Alpaca",
     description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
+      "Transform your PDF reading experience with Alpaca, a web app powered by AI that analyzes your uploaded PDFs.",
+    tags: [
+      "Next.js",
+      "PostgreSQL",
+      "Tailwind",
+      "TypeScript",
+      "AWS S3",
+      "DrizzleORM",
+      "PineconeDB",
+      "Clerk-Auth",
+    ],
     imageUrl: alpaca,
+    link: "https://github.com/xmayukx/alpaca",
+    deployUrl: "https://alpaca-sigma.vercel.app/",
   },
   {
     title: "Dimex",
     description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-    imageUrl: alpaca,
+      "Your easy-to-use finance tracker. Monitor income, expenses, savings, budgets, and gain insights for financial success.",
+    tags: [
+      "React",
+      "TypeScript",
+      "Next.js",
+      "Tailwind",
+      "Redux",
+      "NextAuth",
+      "MongoDB",
+    ],
+    imageUrl: dimex,
+    link: "https://github.com/xmayukx/dimex",
+    deployUrl: "https://dimex-fawn.vercel.app/",
   },
   {
-    title: "NFT-Marketplace",
-    description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-    imageUrl: alpaca,
+    title: "Notrox-nft",
+    description: "An NFT Market place for NOTROX APEs",
+    tags: [
+      "React",
+      "Next.js",
+      "Tailwind",
+      "Sanity",
+      "Metamask",
+      "thirdweb",
+      "TypeScript",
+      "Web3",
+    ],
+    imageUrl: nft,
+    link: "https://github.com/xmayukx/nft-marketplace",
+    deployUrl: "https://nft-marketplace-xmayukx.vercel.app/",
   },
 ] as const;
 
@@ -95,6 +134,7 @@ export const skillsData = [
   "Prisma",
   "REST API",
   "MongoDB",
+  "Go",
   "Redux",
   "GraphQL",
   "Apollo",
