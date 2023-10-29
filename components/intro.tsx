@@ -5,11 +5,14 @@ import Link from "next/link";
 import React, { useEffect } from "react";
 import { BsArrowRight } from "react-icons/bs";
 import { BiLogoLinkedin } from "react-icons/bi";
-import { FiGithub } from "react-icons/fi";
+import { FiGithub, FiTwitter, FiX } from "react-icons/fi";
 import { HiOutlineDocumentText } from "react-icons/hi2";
+import { FaXTwitter, FaHashnode } from "react-icons/fa6";
 import { useInView } from "react-intersection-observer";
 import { useActiveSectionContext } from "@/context/active-section-context";
 import { useSectionInView } from "@/lib/hooks";
+import { socials } from "@/lib/data";
+import Social from "./socials";
 
 export default function Intro() {
   const { ref } = useSectionInView("Home");
@@ -70,7 +73,7 @@ export default function Intro() {
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
-          className="flex flex-col sm:flex-row gap-x-2 gap-y-2 justify-center grid-cols-2 text-lg"
+          className="flex flex-col gap-x-2 gap-y-5 justify-center text-lg"
         >
           <div className="flex gap-x-2 justify-center">
             <Link
@@ -95,20 +98,15 @@ export default function Intro() {
             </Link>
           </div>
           <div className="flex gap-x-2 justify-center">
-            <Link
-              target="_blank"
-              className="bg-white/70 text-black  dark:bg-gray-300/10 dark:text-white p-4 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] transition active:scale-105 cursor-pointer"
-              href={"https://www.linkedin.com/in/mayukh-hazari-212276220"}
-            >
-              <BiLogoLinkedin className="text-xl" />
-            </Link>
-            <Link
-              target="_blank"
-              className="bg-white/70 text-black  dark:bg-gray-300/10 dark:text-white p-4 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] transition active:scale-105 cursor-pointer"
-              href={"https://github.com/xmayukx"}
-            >
-              <FiGithub className="text-xl font-medium" />
-            </Link>
+            {socials.map((social, index) => (
+              <React.Fragment key={index}>
+                <Social
+                  link={social.link}
+                  icon={social.icon}
+                  name={social.name}
+                />
+              </React.Fragment>
+            ))}
           </div>
         </motion.div>
       </div>

@@ -27,7 +27,7 @@ export const Project = ({
     <motion.div
       style={{ scale: scaleProgress, opacity: opacityProgress }}
       ref={ref}
-      className="group  mb-3 sm:mb-8 last:mb-0"
+      className="group mb-3 sm:mb-8 last:mb-0"
     >
       <section className=" relative dark:bg-rose-950/60 bg-gray-200 dark:hover:bg-rose-950/50 hover:bg-gray-300 transition max-w-[40rem] border border-black/5 overflow-hidden sm:pr-8 sm:h-[18rem] rounded-lg">
         <div className="sm:group-even:ml-[20rem] pb-7 px-5 sm:pl-10 sm:pr-2 pt-5 sm:max-w-[50%] flex flex-col h-full">

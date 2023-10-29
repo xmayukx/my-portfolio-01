@@ -3,6 +3,31 @@ import { MdOutlineWorkOutline } from "react-icons/md";
 import alpaca from "@/public/alpaca.png";
 import dimex from "@/public/dimex.png";
 import nft from "@/public/nft-marketplace.png";
+import { FaXTwitter, FaHashnode } from "react-icons/fa6";
+import { BiLogoLinkedin } from "react-icons/bi";
+import { FiGithub, FiTwitter, FiX } from "react-icons/fi";
+export const socials = [
+  {
+    name: "GitHub",
+    link: "https://github.com/xmayukx",
+    icon: React.createElement(FiGithub),
+  },
+  {
+    name: "X.com",
+    link: "https://twitter.com/xmayuk_hx",
+    icon: React.createElement(FaXTwitter),
+  },
+  {
+    name: "LinkedIn",
+    link: "https://www.linkedin.com/in/mayukh-hazari-212276220",
+    icon: React.createElement(BiLogoLinkedin),
+  },
+  {
+    name: "Hashnode",
+    link: "https://mayukh918.hashnode.dev/",
+    icon: React.createElement(FaHashnode),
+  },
+];
 
 export const links = [
   {
