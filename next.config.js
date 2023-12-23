@@ -3,7 +3,7 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
-        hostname: "scontent.fccu2-3.fna.fbcdn.net",
+        hostname: "media.licdn.com",
       },
     ],
   },

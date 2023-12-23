@@ -11,6 +11,7 @@ import { useSectionInView } from "@/lib/hooks";
 import { useInView } from "react-intersection-observer";
 import { useTheme } from "@/context/theme-context";
 import { IconType } from "react-icons";
+import Link from "next/link";
 
 export default function Experience() {
   const { ref, inView } = useSectionInView("Experience", 0.25);
@@ -39,7 +40,9 @@ export default function Experience() {
                 fontSize: "1.5rem",
               }}
             >
-              <h3 className=" font-semibold capitalize">{item.title}</h3>
+              <Link target="_blank" href={item.link}>
+                <h3 className=" font-semibold capitalize">{item.title}</h3>
+              </Link>
               <p className=" font-normal !mt-0">{item.location}</p>
               <p className="!mt-1 !font-normal dark:text-rose-100">
                 {item.description}

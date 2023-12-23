@@ -2,22 +2,25 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useEffect } from "react";
+import React, { useState } from "react";
 import { BsArrowRight } from "react-icons/bs";
-import { BiLogoLinkedin } from "react-icons/bi";
-import { FiGithub, FiTwitter, FiX } from "react-icons/fi";
 import { HiOutlineDocumentText } from "react-icons/hi2";
-import { FaXTwitter, FaHashnode } from "react-icons/fa6";
-import { useInView } from "react-intersection-observer";
 import { useActiveSectionContext } from "@/context/active-section-context";
 import { useSectionInView } from "@/lib/hooks";
 import { socials } from "@/lib/data";
 import Social from "./socials";
 
 export default function Intro() {
+  const [imageError, setImageError] = useState(false);
+
+  const handleImageError = () => {
+    setImageError(true);
+  };
   const { ref } = useSectionInView("Home");
   const { activeSection, setActiveSection, setTimeOfLastClick } =
     useActiveSectionContext();
+  const imgUrl =
+    "https://media.licdn.com/dms/image/D5603AQF9su6z0UBOyA/profile-displayphoto-shrink_400_400/0/1703316872789?e=1708560000&v=beta&t=adcz8aZxIhy89Po4Tv8XaeW03oddYNGqQMDWurecnew";
   return (
     <section
       ref={ref}
@@ -32,12 +35,13 @@ export default function Intro() {
             transition={{ type: "tween", duration: 0.2 }}
           >
             <Image
-              src="/me.png"
+              src={imageError ? "/me2.png" : imgUrl}
               alt="mayukh-hazari"
               width={192}
               height={192}
               quality={95}
               priority={true}
+              onError={handleImageError}
               className="h-24 w-24 rounded-full object-cover border-[0.35rem] border-black shadow-xl group-hover:border-0 transition-all group-hover:w-32 group-hover:h-32"
             />
           </motion.div>
@@ -91,7 +95,7 @@ export default function Intro() {
               target="_blank"
               className=" bg-white/70 text-black  dark:bg-gray-300/10 dark:text-white px-7 py-2 flex items-center gap-2 rounded-3xl outline-none hover:scale-110 transition active:scale-95"
               href={
-                "https://drive.google.com/file/d/1AlPp-0wU2c0YWzthFUWb8Wj-wEhTMcTM/view"
+                "https://drive.google.com/file/d/1OZoBtN-Um9rJV5-BOHpKnkzL1qPHRJ-g/view?usp=sharing"
               }
             >
               My Resume <HiOutlineDocumentText className="" />

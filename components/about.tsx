@@ -21,7 +21,7 @@ export default function About() {
         <p className=" font-normal mb-3">
           I&apos;m Mayukh Hazari, a Full Stack Web Developer based in West
           Bengal, India. My expertise spans TypeScript, Go, React, NextJS,
-          Node.js, Web3, Python and Rust.
+          Node.js & TailwindCSS.
         </p>
         <p className=" font-normal mb-3">
           I&apos;m passionate about creating digital experiences that seamlessly

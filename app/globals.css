@@ -9,3 +9,23 @@ html {
 html.dark {
   --line-color: #e5e5e5;
 }
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #0d0d18;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #f3f3f35d;
+  border-radius: 2rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

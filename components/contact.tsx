@@ -23,9 +23,12 @@ export default function Contact() {
       className="mb-20 sm:mb-28 w-[min(100%,38rem)] text-center scroll-mt-28"
     >
       <SectionHeading>Contact me</SectionHeading>
-      <p className="dark:text-gray-500 -mt-4 text-xs">
+      <p className="dark:text-gray-500 -mt-4 text-sm">
         Please contact me directly at{" "}
-        <a className="underline" href="mailto:hazari.mayukh77@gmail.com">
+        <a
+          className="underline hover:text-gray-300"
+          href="mailto:hazari.mayukh77@gmail.com"
+        >
           {" "}
           hazari.mayukh77@gmail.com
         </a>{" "}

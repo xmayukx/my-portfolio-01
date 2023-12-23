@@ -6,6 +6,7 @@ import nft from "@/public/nft-marketplace.png";
 import { FaXTwitter, FaHashnode } from "react-icons/fa6";
 import { BiLogoLinkedin } from "react-icons/bi";
 import { FiGithub, FiTwitter, FiX } from "react-icons/fi";
+import { link } from "fs";
 export const socials = [
   {
     name: "GitHub",
@@ -58,7 +59,17 @@ export const links = [
 
 export const experiencesData = [
   {
+    title: "ProjectX.Cloud",
+    link: "https://projectx.cloud/",
+    location: "Backend Developer",
+    description:
+      " As a Backend Developer, I actively engage in various initiatives that drive the adoption and development of Cloud Native solutions. I explore new opportunities, networking with industry leaders, and continuously expanding my knowledge in this rapidly evolving space.",
+    icon: React.createElement(MdOutlineWorkOutline),
+    date: "Dec 2023 - Present",
+  },
+  {
     title: "Superteam",
+    link: "https://superteam.fun/",
     location: "Contributer",
     description:
       "In my role as a Contributor, I actively engage in various initiatives that drive the adoption and development of Web3 solutions. I explore new opportunities, networking with industry leaders, and continuously expanding my knowledge in this rapidly evolving space.",
@@ -67,6 +78,7 @@ export const experiencesData = [
   },
   {
     title: "Google Developer Student Club",
+    link: "https://gdsc.community.dev/dr-sudhir-chandra-sur-institute-of-technology-sports-complex-kolkata/",
     location: "Web/App Lead",
     description:
       "As Web/App Lead, I lead the development of the club's website and other web apps.",
@@ -75,6 +87,7 @@ export const experiencesData = [
   },
   {
     title: "CNCF Hoogly",
+    link: "https://community.cncf.io/cloud-native-hooghly/",
     location: "Technical Team Member",
     description:
       "As a Technical Team Member, I actively engage in various initiatives that drive the adoption and development of Cloud Native community. I explore new opportunities, networking with industry leaders, and continuously expanding my knowledge in this rapidly evolving space.",
@@ -83,6 +96,7 @@ export const experiencesData = [
   },
   {
     title: "GirlScript Summer of Code",
+    link: "https://gssoc.girlscript.tech/",
     location: "Contributer",
     description:
       "As a Contributer, I actively engage and contributed to various Open Source projects. I explore new opportunities, networking with industry leaders, and continuously expanding my knowledge in this rapidly evolving space",
@@ -147,23 +161,14 @@ export const projectsData = [
 ] as const;
 
 export const skillsData = [
-  "HTML",
-  "CSS",
   "JavaScript",
   "TypeScript",
-  "React",
+  "ReactJS",
   "Next.js",
   "Node.js",
-  "Git",
   "Tailwind",
-  "Prisma",
-  "REST API",
   "MongoDB",
   "Go",
   "Redux",
-  "GraphQL",
-  "Apollo",
-  "Express",
   "PostgreSQL",
-  "Framer Motion",
 ] as const;
