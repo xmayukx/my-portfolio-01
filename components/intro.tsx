@@ -12,7 +12,10 @@ import Social from "./socials";
 
 export default function Intro() {
   const [imageError, setImageError] = useState(false);
-
+  const resumeURL =
+    "https://drive.google.com/file/d/1OZoBtN-Um9rJV5-BOHpKnkzL1qPHRJ-g/view?usp=sharing";
+  const resumeDoxUrl =
+    "https://docs.google.com/document/d/1nHf4hRB4aqrd_l3f03qKry6lcB8yZLLKdd9ErsTOAI0/edit?usp=sharing";
   const handleImageError = () => {
     setImageError(true);
   };
@@ -94,9 +97,7 @@ export default function Intro() {
             <Link
               target="_blank"
               className=" bg-white/70 text-black  dark:bg-gray-300/10 dark:text-white px-7 py-2 flex items-center gap-2 rounded-3xl outline-none hover:scale-110 transition active:scale-95"
-              href={
-                "https://drive.google.com/file/d/1OZoBtN-Um9rJV5-BOHpKnkzL1qPHRJ-g/view?usp=sharing"
-              }
+              href={resumeDoxUrl}
             >
               My Resume <HiOutlineDocumentText className="" />
             </Link>
